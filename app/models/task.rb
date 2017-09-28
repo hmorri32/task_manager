@@ -7,8 +7,6 @@ class Task
     @title       = params['title']
     @description = params['description']
     @id          = params["id"] if params["id"]
-    @database    = SQLite3::Database.new('db/task_manager_development.db')
-    @database_results_as_hash = true
   end
   
   def save
